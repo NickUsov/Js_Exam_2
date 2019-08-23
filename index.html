@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js Modal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <p>test text</p>
+        <p>test text</p>
+        <p>test text</p>
+        <p>test text</p>
+        <p class="token">test text</p>
+        <p>test text</p>
+        <p>test text</p>
+        <p>test text</p>
+        <p>test text</p>
+        <p>test text</p>
+        <p>test text</p>
+        <p>test text</p>
+        <p>test text</p>
+        <p>test text</p>
+        <p>test text</p>
+        <p>test text</p>
+        <p>test text</p>
+        <p>test text</p>
+        <p>test text</p>
+        <p>test text</p>
+    </div>
+    <div class="modal">
+        <div class="closing">
+
+        </div>
+        <p>Привет!</p>
+    </div> 
+    <script>
+
+        $('.container').on("scroll", ()=>{
+            if($('.token').position().top == 0) {
+                $('.modal').css("display", "block");            
+            };
+        });
+        $('.closing').on("click", ()=>{
+            $('.modal').css("display", "none");
+        });
+    </script>
+</body>
+</html>
